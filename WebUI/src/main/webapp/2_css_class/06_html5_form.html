@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06_html5_form</title>
+
+<!-- 외부 CSS 파일을 연결 -->
+<link href="/WebUI/2_css_class/css/myform.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	/* 우선순위를 이용해서 수정 작업을 하는데 미적감각(????) 동작 */
+	
+	body > form { background-image:linear-gradient(#FFE3EE, #FFE3EE); 
+				  border:5px solid transparent;
+				  border-radius:20px;
+				  background-clip:border-box, ;
+				  background-origin:border-box;
+				  animation:huerotate 2s infinite linear; } 
+				  
+	@keyframes huerotate { 0% { filter:hue-rotate(0deg); } 100% { filter:hue-rotate(360deg); } }
+				   
+	body > form > fieldset > legend { text-align:center; }
+	body > form > fieldset:last-of-type > legend { display:none; } 
+	
+	body { font-family:고딕; }
+	
+	input[type=range] { accent-color:#FF7E9D; }
+	
+	fieldset:last-of-type > input[type=submit]:hover { background-color:#EAA2C5; } 
+	fieldset:last-of-type > input[type=submit] { font-family:고딕; } 
+	
+</style>
+
+</head>
+<body>
+
+<!-- 웹에서 메소드 : 전송방식 (get/post) 
+	get 	: http(네트워크의 전송규칙)에 헤더부분에 url로 데이터를 전송
+	post	: http에 바디부분을 데이터를 전송
+	
+		- 보안데이터 (비밀번호)
+		- 많은 용량의 데이터 전송시
+		- 파일전송
+-->
+<form method="post">
+	<fieldset>
+		<legend>로그인 정보</legend>
+		<ol>
+			<li>
+				<label for="id">아이디</label>
+				<input id="id" type="text" name="id"> 
+			</li>
+			<li>
+				<label for="pw">비밀번호</label>
+				<input id="pw" type="password" name="pw"> 
+			</li>
+			<li>
+				<label for="ckpw">비밀번호 확인</label>
+				<input id="ckpw" type="password" name="ckpw"> 
+			</li>
+			<li>
+				<label for="grade">회원 등급</label>
+				<input id="grade" type="text" name="grade" value="준회원" readonly>
+			</li>
+		</ol>
+	</fieldset>
+	
+	<fieldset>
+		<legend>개인 정보</legend>
+		<ol>
+			<li>
+				<label for="name">이름</label>
+				<input id="name" type="text" name="name" placeholder="5자미만 공백없이" onfocus="placeholder=''" onblur="placeholder='5자미만 공백없이'" maxlength="4"> 
+			</li>
+			<li>
+				<label for="email">메일 주소</label>
+				<input id="email" type="email" name="email" placeholder="abcd@domain.com" onfocus="placeholder=''" onblur="placeholder='abcd@domain.com'"> 
+			</li>
+			<li>
+				<label for="contact">연락처</label>
+				<input id="contact" type="tel" name="contact" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"> 
+			</li>
+			<li>
+				<label for="birth">생일</label>
+				<input id="birth" type="date" name="birth">
+			</li>
+		</ol>
+	</fieldset>
+	
+	<fieldset>
+		<legend>코드 숙련도(상,중,하)</legend>
+		<ol>
+			<li>
+				<label for="level"></label>
+				<input id="level" type="range" name="level" min="0" max="2">
+			</li>
+		</ol>
+	</fieldset>
+	
+	<fieldset>
+		<legend></legend>
+		<input type="submit" name="제출">
+	</fieldset>
+</form>
+
+</body>
+</html>

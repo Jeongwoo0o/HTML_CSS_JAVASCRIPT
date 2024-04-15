@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Array 객체 </title>
+<script type="text/javascript">		
+
+// 1. 배열의 함수 확인
+
+	var arr = ['김태희','송혜교','전지현','김고은','임수정'];
+	document.writeln( arr + '<br/>');
+	
+	document.writeln( arr.join("/") + '<br/>');		// 0/1/2/3/4
+	document.writeln( arr.slice(3) + '<br/>');		// 3, 4	3번째 부터 시작
+	document.writeln( arr.slice(1,3) + '<br/>');	// 1, 2	end-1까지
+	
+	document.writeln( arr.reverse() + '<br/>');		// 4, 3, 2, 1, 0 (원본 수정)
+	document.writeln( arr + '<br/>');				// 4, 3, 2, 1, 0
+	
+	document.writeln( arr.sort() + '<br/>');		// 4, 3, 2, 1, 0 (원본 수정)
+	document.writeln( arr + '<hr/>');				// 4, 3, 2, 1, 0
+	
+	// [주의] sort() : 문자열 정렬 1 ~ 9
+	var arr2 = [5, 15, 20, 9];
+	document.write(arr2.sort() + "<br/>");			// 숫자를 문자로 취급
+
+	var arrTemp = ["강동원", "조인성"];
+	document.write(arr.concat(arrTemp) + "<br/>");	// 원본 수정X
+	document.write(arr + "<hr/>");
+	
+	document.write(arr.pop() + "<br/>");			// 전지현 (원본 수정) (스택 구조)
+	document.write(arr + "<br/>");					// 김고은,김태희,송혜교,임수정
+													
+	document.write(arr.push('김수미') + "<br/>");		// 5 (원본 수정)
+	document.write(arr + "<br/>");					// 김고은,김태희,송혜교,임수정,김수미
+			
+	document.write(arr.shift() + "<br/>");			// 김고은 (원본 수정) (큐 구조)
+	document.write(arr + "<hr/>");					// 김태희,송혜교,임수정,김수미
+	
+	// 2. 배열을 스택과 큐로 이용하기
+	/*
+		스택	: LIFO Last In First Out
+		큐	: FIFO First In First Out
+	*/
+	var data = [];
+	data.push('박서준');
+	data.push('현빈');
+	data.push('박보검');
+	document.writeln(data.pop() + "<br/>");
+	document.writeln(data.pop() + "<br/>");
+	document.writeln(data.pop() + "<br/>");
+	document.writeln(data.pop() + "<hr/>");		// 마지막에 들어온 값이 먼저 나감
+
+	var data2 = [];
+	data2.push('박소담');
+	data2.push('김고은');
+	data2.push('이지은');
+	document.writeln(data2.shift() + "<br/>");
+	document.writeln(data2.shift() + "<br/>");
+	document.writeln(data2.shift() + "<br/>");
+	document.writeln(data2.shift() + "<hr/>");	// 처음에 들어온 값이 먼저 나감
+
+	// 3. es6
+	// (1) forEach() 메소드
+	//			return 없음
+	/*
+		for(var i = 0; i < data1.length; i++) {
+			
+		}
+	*/
+	var data1 = ["강", "김", "박"];
+	data1.forEach(function(value, index) {
+		document.write(index + " : " + value + "<br/>");
+	});
+	
+	// (2) map() 메소드
+	//			return 있음
+	var data2 = [1, 2, 3, 4, 5];
+	var result = data2.map(function(value, index) {
+		return value * value;
+	});
+	document.write("결과 : " + result + "<hr/>"); 
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

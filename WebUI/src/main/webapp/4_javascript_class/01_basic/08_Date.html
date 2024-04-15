@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+<script type="text/javascript">	
+ 	
+	//var d = new Date('2023/08/15');
+	var d = new Date();								// 오늘 날짜
+	document.writeln( d  + '<br/>');
+	document.writeln( d.getYear()  + '<br/>');		// 124 (사용X)
+	document.writeln( d.getFullYear()  + '<br/>');	// 2024
+	document.writeln( d.getMonth()  + '<br/>');		// 3 (0 ~ 11)
+	document.writeln( d.getDate()  + '<br/>');		// 9
+	document.writeln( d.getDay()  + '<br/>');		// 2 (0 ~ 6)
+	
+	document.writeln( d  + '<br/>');
+	document.writeln( d.toLocaleString()  + '<br/>');
+	document.writeln( d.toGMTString()  + '<br/>');
+	document.writeln( d.toDateString()  + '<hr/>');
+	
+	// [날짜계산]
+	var today = new Date();
+	// 현재 날짜에서 3개월 전
+	today.setMonth(today.getMonth() - 3);
+	document.writeln( today.toDateString()  + '<hr/>');
+	
+	// 날짜에서 20일을 더한 날짜?
+	var today = new Date();
+	today.setDate(today.getDate() + 30);
+	document.writeln( today.toDateString()  + '<hr/>');
+	
+	// 시, 분, 초
+	var today = new Date();
+	document.writeln( today.getHours()  + '<br/>');
+	document.writeln( today.getMinutes()  + '<br/>');
+	document.writeln( today.getSeconds()  + '<hr/>');
+	
+	// 전달의 마지막 날
+	var today = new Date();
+	today.setDate(0);
+	document.writeln( today.toDateString()  + '<br/>');
+	
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

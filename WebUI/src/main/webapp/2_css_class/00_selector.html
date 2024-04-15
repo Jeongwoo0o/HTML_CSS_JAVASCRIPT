@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 연습</title>
+<style type="text/css">
+
+	/* 우선순위 : id(100) > class(10) > element(1) */
+	
+	div { color:red; }
+	div { color:blue; }	/* 덮어짐 */
+	
+	.point10 { color:orange; }	/* class */
+	#point100 { color:gray; }	/* id */
+	
+	/* 기존 css 원본을 수정하지 않습니다.
+		-> 우선순위를 이용해서 수정합니다.
+		
+		[주의] 1+1= 반드시 2가 아닐 수 있음
+	*/
+	
+	body > div#point100 { color:cyan; }
+	
+	input[type="text"] { border:2px dashed #412AB4; }
+	
+	/*
+		1) input 태그의 첫번째 요소를 찾기
+		2) input 태그의 마지막 요소를 찾기
+		3) input 태그의 5번째 요소를 찾기
+		4) input 태그의 뒤에서 2번째 요소를 찾기
+	*/
+	input:first-of-type { color:red; }
+	input:last-of-type { color:blue; }
+	input:nth-of-type(5) { color:pink; }
+	input:nth-last-of-type(2) { color:yellow; }
+
+</style>
+</head>
+<body>
+	
+	<div id="point100" class="point10">안녕하세요</div>
+	
+	
+	<p>
+		<input type="text" value="입력1">
+		<input type="checkbox"> 선택
+		<input type="radio" name="rd"  checked="checked"> 예
+		<input type="radio" name="rd"> 아니오
+		<input type="text" value="입력2" disabled="disabled">		
+		<input type="button" value="확인">
+		<input type="button" value="취소">
+	</p>
+	
+	
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>9_homework.html</title>
+<script type="text/javascript" src="../lib/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 0부터 시작
+		// () 안의 번호에 해당하는 순서의 태그를 지칭
+		$("#t1 tr td:eq(0)").css({"background":"red"}); 
+		
+		// 1부터 시작
+		// () 안의 번호에 해당하는 순서의 태그들을 지칭
+		$("#t2 tr td:nth-child(2)").css({"background":"blue"});	
+		
+	});
+</script>
+</head>
+<table border="1" id="t1">
+		<tr>
+			<td>1번째</td>
+			<td>2번째</td>
+			<td>3번째</td>
+		</tr>
+		<tr>
+			<td>1번째</td>
+			<td>2번째</td>
+			<td>3번째</td>
+		</tr>
+		<tr>
+			<td>1번째</td>
+			<td>2번째</td>
+			<td>3번째</td>
+		</tr>
+</table>
+
+<table border="1" id="t2">
+		<tr>
+			<td>first</td>
+			<td>second</td>
+			<td>third</td>
+		</tr>
+		<tr>
+			<td>first</td>
+			<td>second</td>
+			<td>third</td>
+		</tr>
+		<tr>
+			<td>first</td>
+			<td>second</td>
+			<td>third</td>
+		</tr>
+</table>
+</body>
+</html>

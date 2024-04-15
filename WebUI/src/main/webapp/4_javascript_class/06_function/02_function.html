@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>리터럴 함수</title>
+</head>
+<body>
+	<script>
+
+	// @ function 명령은 정적인 구조이고, 
+	// @ 함수리터럴과 화살표함수는 실행시 판단한다.
+	
+	// [*] 호이스팅 <- function 명령
+	/* document.writeln('삼각형의 면적은 :' +  triangle(4,3) + '</br>');
+	function triangle ( base, height ){
+		return base * height / 2;
+	} */ 
+	
+	
+	// 에러 <- 함수리터럴, 애로우함수
+	/* document.writeln('삼각형의 면적은 2: ' +  triangle2(4,3) + '</br>');		
+	var triangle2 = function( base, height ){
+		return base * height / 2;
+	} */
+	
+	
+	// @ 함수는 데이터형의 일종이다.
+	var triangle3 = function( base, height ){
+		return base * height / 2;
+	}
+	document.writeln('삼각형의 면적은 2: ' +  triangle3(4,3) + '</br>');
+	document.writeln('삼각형의 면적은 2: ' +  triangle3 + '</br>');
+	
+	triangle3 = "문자열";
+	document.writeln('삼각형의 면적은 2: ' +  triangle3 + '</br>');
+	
+	function doA() {
+		document.write("함수 A 호출 <br/>");
+	}
+	
+	function doB() {
+		document.write("함수 B 호출 <br/>");
+	}
+	
+	var arr = [doA, doB];
+	console.log(arr);
+	
+	arr[0]();
+	
+	// 함수가 다른 함수의 인자가 될 수 있다.
+	/* function f4(x, y, z) {
+		return z(x() + y());
+	}
+	
+	var f1 = function() 	{return 2;}
+	var f2 = function() 	{return 1;}
+	var f3 = (a) => 		{return a * a;}
+	
+	var result = f4(f1, f2, f3);
+	document.write("결과 : " + result + "<br/>"); */
+	
+	// 위와 같음
+	function f4(x, y, z) {
+		return z(x() + y());
+	}
+	
+	var result = f4(function() 	{return 3;}
+					, function() 	{return 1;}
+					, (a) => 		{return a * a;});
+	document.write("결과 : " + result + "<br/>");
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr">
+<title> window 예제 </title>
+<script type="text/javascript">
+
+	/*
+		1. 선택한 옵션의 값(value)을 얻어온다.
+		2. location 객체의 href 프로퍼티에 url을 지정
+	*/
+	window.onload = function() {
+		let sel = document.querySelector("#chooseSite");
+		sel.onchange = function() {
+			
+			/* setTimeout(test, 1000);
+			// setInterval(test, 1000);
+			function test() {
+				// location.href = sel.value;		// 뒤로가기 불가능
+				location.replace(sel.value);		// 뒤로가기 가능
+			} */
+			
+			setTimeout(function test() {			// 줄인 함수
+				location.replace(sel.value);
+			}, 1000);
+			
+		}
+	}
+	
+	/*
+		[참고]
+			
+		- setTimeout()(func, time) 	: 
+								정해진 time이 지난 후에 한 번 func 함수 실행
+		- setInterval()(func, time)	:
+								정해진 time마다 매번 func 함수 실행
+	*/
+
+
+</script>
+</head>
+<body>
+	<form name="frm">
+		<h1> 이동하길 원하는 페이지를 선택하세요 </h1>
+		<select name="chooseSite" id='chooseSite'>
+			<option>골라 골라</option>
+			<option value="http://www.daum.net">다음네</option>
+			<option value="http://www.naver.com">네이바</option>
+			<option value="http://www.nate.com">네이또</option>
+		</select>
+	</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트 함수 3가지</title>
+	<script>
+	// 1. function 명령(선언)
+	function triangle(base, height) {
+		return base * height / 2;
+	}
+	document.write("1. 삼각형의 면적은 " + triangle(3, 4) + "<br/>");
+	
+	// *******
+	// 2. 함수리터럴   * 리터럴 : 변수의 값		
+	var triangle = function(base, height) {
+		return base * height / 2;
+	};
+	document.write("2. 삼각형의 면적은 " + triangle(3, 4) + "<br/>");
+
+	// 3. 애로우함수
+	var triangle = (base, height) => {return base * height / 2;}
+	document.write("3. 삼각형의 면적은 " + triangle(3, 4) + "<br/>");
+	</script>
+</head>
+
+<body>
+
+  
+ </body>
+</html>

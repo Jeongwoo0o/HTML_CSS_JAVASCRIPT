@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02_연습.html</title>
+</head>
+<body>
+
+<h3>절대경로</h3>
+<ul>
+	<li><a href="/WebUI/images/sample/sensitive.jpg">이미지파일</a></li>
+	<li><a href="/WebUI/media/horse.mp3">오디오파일</a></li>
+	<li><a href="/WebUI/media/mov_bbb.mp4">비디오파일</a></li>
+	<li><a href="/WebUI/1_html5_class/02_html5_list.html">페이지이동(웹문서파일)</a></li>
+</ul>
+
+<h3>상대경로</h3>
+<ul>
+	<li><a href="../images/sample/sensitive.jpg">이미지파일</a></li>
+	<li><a href="../media/horse.mp3">오디오파일</a></li>
+	<li><a href="../media/mov_bbb.mp4">비디오파일</a></li>
+	<li><a href="./02_html5_list.html">페이지이동(웹문서파일)</a></li>
+</ul>
+
+<hr/>
+<hr/>
+
+<h3>링크가 아닌 여기서 보고싶다면</h3>
+
+<div>
+<iframe src="/WebUI/1_html5_class/02_html5_list.html" height="200" width="300" title="Iframe Example">
+</iframe>
+</div>
+
+<div>
+<iframe src="http://www.nate.com/" height="200" width="300">
+</iframe>
+</div>
+
+<img src="/WebUI/images/sample/sensitive.jpg"/><br/>
+<img src="../images/sample/sensitive.jpg"/><br/>
+
+<video width="500" height="500" controls>
+	<source src="/WebUI/media/mov_bbb.mp4" type="video/mp4">
+  	<source src="../media/mov_bbb.mp4" type="video/mp4">
+</video>
+
+<audio controls>
+	<source src="/WebUI/media/horse.mp3" type="audio/mpeg">
+  	<source src="../media/horse.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Javascript 객체지향 </title>
+</head>
+<body>
+<script>
+
+/*
+ 	[참고]
+
+	1. 함수
+		(1) 선언
+		function func() {}
+		
+		(2) 호출
+		func();
+		
+	2. 클래스
+		(1) 선언
+		function Student() {}
+	
+		(2) 객체 생성
+		var s = new Student();
+		
+		[참고] 자바의 경우
+		
+		(1) 클래스 선언
+		class Student {
+			
+		}
+		
+		(2) 객체 생성
+		Student s = new Student();
+*/
+
+//0. 	클래스 선언 -  생성자로 초기화하기
+/*
+function Student(id, name, dept){
+	this.id = id;
+	this.name = name;
+	this.dept = dept;
+	
+	this.display =function(){
+		var str  = "학번: "+id;
+		str += "/이름:" + name;
+		str += "/학과:" + dept + "<br/>"; 
+		return   str;
+	}
+}
+
+var kim = new Student("001","김길동", "컴공");
+var lee = new Student("002","이길동", "경영");
+
+document.write( kim.display() );
+document.write( lee.display() );
+*/
+
+// Student 클래스 선언 
+// 생성시 이름, 국어, 영어, 수학 점수를 초기화하기
+// 멤버함수로 sum 함수에서 전체 성적의 총합을 리턴하기
+
+function Student(name, kor, eng, math) {
+	this.name = name;
+	this.kor = kor;
+	this.eng = eng;
+	this.math = math;
+}
+
+/*
+Student.prototype.showInfo = function() {
+	document.write(this.name + "님 " + this.kor + " / " + this.eng + " / " + this.math + "<br/>");
+}
+
+Student.prototype.sum = function() {
+	return this.kor+this.eng+this.math;
+}
+*/
+
+Student.prototype = {
+	showInfo : function() {
+		document.write(this.name + "님 " + this.kor + " / " + this.eng + " / " + this.math + "<br/>");
+	},
+	sum : function() {
+		return this.kor+this.eng+this.math;
+	}
+}
+
+let lee = new Student("이정우", 80, 80, 80);
+let kim = new Student("김정우", 70, 60, 50);
+
+document.write(lee.name + "님의 성적은 " + lee["sum"]() + "<br/>");
+document.write(kim.name + "님의 성적은 " + kim.sum() + "<br/>");
+
+lee.showInfo();
+kim.showInfo();
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+table { border:2px solid hotpink;
+		background:#FAF58C; }
+		
+td { border:2px solid hotpink; 
+	 width:100px; 
+	 height:60px; }
+	 
+.first { background:#BECDFF; }

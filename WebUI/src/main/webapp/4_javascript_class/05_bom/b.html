@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>b.html</title>
+<script type="text/javascript">
+	window.onload = function() {
+		let sel = frm.location;
+		
+		for(let i = 0; i < sel.length; i++) {
+			sel[i].onchange = function() {
+				opener.frm.output.value = this.value;		// 부모 창 찾아가기
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="frm">
+		<input type="text" name="temp" value="서울시">
+		<br/>
+		<br/>
+		<input type="radio" name="location" value='가산'> 가산 <br>
+		<input type="radio" name="location" value='판교' > 판교 <br>
+		<input type="radio" name="location" value='부평'> 부평 <br>
+	</form>
+</body>
+</html>

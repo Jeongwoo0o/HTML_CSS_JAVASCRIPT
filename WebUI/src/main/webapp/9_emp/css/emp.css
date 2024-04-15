@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.eximg { width:80px;
+	   height:50px;
+	   border:2px solid hotpink; }
+	   
+.eximg:hover { width:500px;
+			height:200px; }
+			
+body { background-color:#9A7C13;
+	   text-align:center; }

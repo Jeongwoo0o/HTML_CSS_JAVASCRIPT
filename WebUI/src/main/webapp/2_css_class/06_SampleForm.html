@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06_SampleForm.html</title>
+</head>
+<body>
+
+<form>
+	<fieldset>
+		<legend>회원가입</legend>
+		<ol>
+			<li>
+				<label for="name">이름</label>
+				<input id="name" type="text" name="irum">
+			</li>
+			
+			<li>
+				<label for="gender">성별</label>
+				<input id="gender" type="radio" name="gender" value="남자" checked="checked">남자
+				<input id="gender" type="radio" name="gender" value="여자">여자
+			</li>
+			
+			<li>
+				<label for="job">직업</label>
+				<select id="job" name="job">
+					<option value="개발자">개발자</option>
+					<option value="코더">코더</option>
+					<option value="프로그래머" selected="selected">프로그래머</option>
+				</select>
+			</li>
+			
+			<li>
+				<label for="hobby">취미</label>
+				<input id="hobby" type="checkbox" name="hobby" value="잠자기" checked="checked">잠자기
+				<input id="hobby" type="checkbox" name="hobby" value="먹기"">먹기
+				<input id="hobby" type="checkbox" name="hobby" value="숨쉬기"">숨쉬기
+				<input id="hobby" type="checkbox" name="hobby" value="멍때리기"">멍때리기
+			</li>
+			
+			<li>
+				<label for="bfgf">애인</label>
+				<input id="bfgf" type="radio" name="bfgf" value="있다">있다
+				<input id="bfgf" type="radio" name="bfgf" value="없다">없다
+			</li>
+			
+			<!-- 웹(web) / 앱(app)  -->
+			<li>
+				<label for="countries">가고싶은 나라</label>
+				<input type="text" list="countries">
+				<datalist id="countries">
+					<option value="가나"/>
+					<option value="스위스"/>
+					<option value="부탄"/>
+				</datalist>
+			</li>
+			
+			<li>
+				<input type="submit" value="확인">
+				<input type="reset" value="취소">
+			</li>
+		</ol>
+	</fieldset>
+</form>
+
+</body>
+</html>

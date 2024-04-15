@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트의 연산자</title>
+<script type="text/javascript">
+
+//1.  실수형 계산에는 주의 -> 2진수로 변환하여 저장하고 연산하기 때문에 발생
+document.write(0.2*3 == 0.6);
+document.write(0.2*3);
+
+document.write(0.2*10*3 == 0.6*10);		// 소수를 먼저 정수로 만들고 계산
+document.write(0.2*3*10 == 0.6*10);
+
+document.write("<hr/>");
+
+//2.==와 === 차이는?
+var num = 10;
+var str = "10";
+
+if(num == str) document.write("같다1");		// 값만 비교
+else document.write("다르다1");
+
+if(num === str) document.write("같다2");	// 자료형까지 비교 
+else document.write("다르다2");
+		
+document.write("<hr/>");
+		
+// 3. 기본형과 참조형
+var a = 10;
+var b = 10;
+if(a == b) document.write("같다3");
+else document.write("다르다3");
+
+var a = ["java", "script"];
+var b = ["java", "script"];
+if(a == b) document.write("같다4");	// 주소가 다름
+else document.write("다르다4");
+
+var a = "Hello";
+var b = "Hello";
+if(a == b) document.write("같다5");
+else document.write("다르다5");
+
+document.write("<hr/>");
+
+// 4. boolean형
+var a = false;
+if(a) document.write(true + "<br/>");
+else document.write(false + "<br/>");
+
+var a = 2;
+if(a) document.write(true + "<br/>");	// 0 => false
+else document.write(false + "<br/>");
+
+var a = undefined;
+if(a) document.write(true + "<br/>");	// undefined => false
+else document.write(false + "<br/>");
+
+var a = null;
+if(a) document.write(true + "<br/>");	// null => false
+else document.write(false + "<br/>");
+
+var a = NaN;	// Not a Number
+if(a) document.write(true + "<br/>");	// NaN => false
+else document.write(false + "<br/>");
+
+document.write("<hr/>");
+
+// 5. 논리형과 논리연산자 결합
+// 중요도에 의해서 결정
+const num1 = null;
+const result1 = num1 || "숫자를 입력하세요";
+document.write(result1 + "<br/>");
+
+const num2 = 100;
+const result2 = num1 || "숫자를 입력하세요";
+document.write(result2 + "<br/>");
+
+const num3 = 100;
+const result3 = num3 && "숫자를 입력하세요";
+document.write(result3 + "<br/>");
+
+const num4 = 100;
+const result4 = num4 && null;
+document.write(result4 + "<br/>");
+
+document.write("<hr/>");
+
+// 6. 삼항연산자
+var num = 100;
+var result = ((typeof num === "number")? num : "숫자를 입력하세요.");
+document.write(result + "<br/>");
+
+var num = "백";
+var result = ((typeof num === "number")? num : "숫자를 입력하세요.");
+document.write(result + "<br/>");
+
+document.write("<hr/>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

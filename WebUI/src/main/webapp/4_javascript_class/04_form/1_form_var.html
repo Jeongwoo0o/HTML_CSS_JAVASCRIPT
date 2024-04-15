@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+	window.onload = function() {
+		document.querySelector("#btn").onclick = function() {
+			/* document.myForm.txt0.value = "홍길동0";
+			document.myForm.txt1.value = "홍길동1";
+			document.myForm.txt2.value = "홍길동2";
+			document.myForm.txt3.value = "홍길동3"; */
+			
+			/*
+				자바스크립트에서 객체 안에 멤버 접근할 때
+				1) 객체명.멤버
+				2) 객체명["멤버명"]
+			*/
+			for(let i = 0; i < 4; i++) {
+				document.myForm["txt" + i].value = "홍길동" + i;
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<form name='myForm'>
+		첫번째 :  <input type='text' name='txt0'><br/>
+		두번째 :  <input type='text' name='txt1'><br/>
+		세번째 :  <input type='text' name='txt2'><br/>
+		네번째 :  <input type='text' name='txt3'><br/>
+		<input type='button' value='값지정'  id='btn'>
+	</form>
+</body>
+</html>

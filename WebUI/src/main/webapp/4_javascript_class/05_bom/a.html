@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>a.html</title>
+</head>
+<body bgcolor="#ddddff">
+<form name="frm">
+	<select name="region" size="1">
+		<option selected> 서울시 </option>
+		<option> 경기도 </option>
+		<option> 강원도 </option>
+		<option> 경상도 </option>
+	</select> <br>
+<!-- testing -->
+	<input type="text" name="output">
+</form>
+</body>
+	<script type="text/javascript">
+		let winObj = window.open
+					("b.html", "창 이름", "width=500, height=400");
+
+		let region = frm.region;
+		region.onchange = function() {
+			winObj.frm.temp.value = this.value;
+		}
+		
+	</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> 첫 연습 </title>
+<style type="text/css">
+	#here { width : 400px;
+			height : 100px;
+			background : green; }
+</style>
+<script type="text/javascript" src="../lib/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/*
+		var h = $("#here");
+		
+		$("#here").click(function() {
+			$("#here").text("클릭하면 글씨 변경");
+		});
+		$("#here").mouseenter(function() {
+			$("#here").text("마우스가 들어감");
+		})
+		$("#here").mouseleave(function() {
+			$("#here").text("마우스가 나감");
+		})
+		h.hover(function(){
+			h.css({"background":"hotpink"})
+		}, function(){
+			h.css({"background":"yellow"})
+		});
+		*/
+		
+		// $("#here").fadeOut(1000);
+		// $("#here").fadeIn(1000);
+		// $("#here").fadeOut(2000).fadeIn(2000);
+		// $("#here").slideUp(1000).slideDown(1000);
+		
+		let s = $("#student");
+		let a = s.find("#age");
+		a.css({
+			"color":"#635261",
+			"font-size":"15px",
+			"background":"red"
+		});
+	});
+</script>
+</head>
+<body>
+	
+
+	<div id="here">
+	아자아자 제이쿼리~~!!! 
+	</div>
+	
+	
+	<div id="student">
+		<div id="name">홍길동</div>
+		<div id="age">34</div>
+	</div>
+
+
+	
+</body>
+</html>

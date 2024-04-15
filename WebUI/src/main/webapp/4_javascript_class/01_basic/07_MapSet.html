@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Map / Set 내장 객체 </title>
+<script type="text/javascript">
+
+// 1. Map : 키와 값으로 관리하는 객체
+let m = new Map();
+m.set('java','1111');
+m.set('script','2222');
+m.set('nodejs', '2222');
+m.set('java','3333');		// 맨 앞의 "java"를 덮어버림. key는 유일해야 함.
+
+let inputId = "nodejs";
+let inputPw = "2222";
+
+for(let [key, v] of m) {
+	document.write(key + " : " + v + "<br/>");	
+	if( key === inputId & v === inputPw) {
+		document.write("<h1>로그인 성공<h1/>");
+		break;
+	}
+}
+
+document.write("<hr/>"); 
+
+ 
+ 
+//-------------------------------------------------------
+// 2. Set  : 중복 값을 허용하지 않는 집합 관리 객체
+let s = new Set();	// index 출력X
+s.add('tiger');
+s.add('dog');
+s.add('lion');
+s.add('dog');
+
+for(let value of s) {
+	document.write(value + "<br/>"); 
+}
+/*
+for(let value in s) {		// for in : index도 출력
+	document.write(value + "<br/>"); 
+}*/
+
+let lotto = new Set();
+while(lotto.size < 6) {
+	lotto.add(parseInt(Math.random() * 45) + 1);
+}
+for(let i of lotto) {
+	document.write(i + ", ");
+}
+
+document.write("<hr/>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

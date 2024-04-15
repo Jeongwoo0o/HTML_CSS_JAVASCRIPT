@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>00_function.html</title>
+<script type="text/javascript">
+	var test = function() {
+		document.write("함수호출 <br/>");
+		return "hello";
+	};
+	
+	test();
+	test();
+	test();
+	
+	var result = test();
+	document.write("결과 : " + result + "<br/>");	// hello 함수호출
+	document.write("결과 : " + test() + "<br/>");	// hello
+	document.write("결과 : " + test + "<br/>");	// function() { document.write("함수호출 <br/>"); return "hello"; } 
+</script>
+</head>
+<body>
+
+</body>
+</html>

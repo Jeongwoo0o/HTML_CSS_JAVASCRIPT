@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 핸들러 연결</title>
+
+<script type="text/javascript">
+	window.onload = function() {
+		// [2] 이벤트 핸들러 : html과 js 분리
+		document.getElementById("btn").onclick = function() {
+			alert("이벤트 발생");
+		}
+	}
+</script>
+
+</head>
+<body>
+	<input type='button' value='눌러' id='btn' />
+	
+	
+	
+</body>
+</html>

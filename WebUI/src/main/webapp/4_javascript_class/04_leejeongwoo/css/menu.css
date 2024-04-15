@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* 테이블 */
+table 			{ border		:1px solid #FF9E9B; }
+
+td				{ border		:1px solid #FF9E9B; }
+			  	  
+.menutable		{ width			:900px;
+				  height		:900px; }
+				  
+.pricetable 	{ width			:900px;
+				  height		:20px;
+				  text-align	:center;
+				  table-layout	:fixed; }
+
+#orderlist		{ width			:900px; 
+				  height		:20px; }
+
+#orderlist td	{ width 		:200px;
+			  	  height		:20px;
+			  	  text-align	:center; }
+			  	  
+
+/* 그 외 */		  	  
+.menuname		{ text-align	:center;
+			  	  background	:#FFDEE9; }
+
+.menuprice		{ text-align	:center;
+			  	  background	:#FFDEE9; }
+
+.submit			{ border-color	:#FF607F;
+				  background	:#FF92B1;
+				  width			:100%; }
+
+textarea		{ width			:900px;
+				  height		:200px; }	

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트 변수와 범위</title>
+	<script>
+		/* *******
+			여기서는 var로만 확인
+			다른 파일에서 var -> let으로 변경하여 확인
+		*/
+		
+		// 1. 글로벌변수와 지역변수
+		/*
+		var scope = "글로벌변수";
+		function getValue() {
+			var scope = "지역변수";
+			return scope;
+		}
+		document.write("1 > " + getValue() + "<br/>");	// 지역변수
+		document.write("2 > " + scope + "<br/>");		// 글로벌변수
+		*/
+		
+		// 2. var 생략가능은 함 -> 글로벌변수로 취급
+		/*
+		scope = "글로벌변수";
+		function getValue() {
+			scope = "지역변수";	// 위의 scope를 덮어버림
+			test = "테스트";
+			return scope;
+		}
+		document.write("1 > " + getValue() + "<br/>");	// 지역변수
+		document.write("2 > " + scope + "<br/>");		// 지역변수
+		document.write("3 > " + test + "<br/>");		// 테스트
+		*/
+		
+		// 3. 지역변수 선언 시 앞에 기술
+		/*
+		var scope = "글로벌변수";
+		function getValue() {
+			document.write("0 > " + scope + "<br/>");	// undefined(값이 아직 지정되지 않은걸로 취급)
+			var scope = "지역변수";
+			return scope;
+		}
+		document.write("1 > " + getValue() + "<br/>");	// 지역변수
+		document.write("2 > " + scope + "<br/>");		// 글로벌변수
+		*/
+		
+		// 4. 자바스크립트의 지역변수는 함수 블록에서만 유효함
+		if(true) {
+			var i = 100;	// 지역변수 아님
+		}
+		document.write("i > " + i + "<br/>");	// 100
+		
+		for(var j = 0; j < 3; j++) { }
+		for(var j = 0; j < 3; j++) { }
+		document.write("j > " + j + "<br/>");	// 3
+	</script>
+</head>
+
+<body>
+
+  
+ </body>
+</html>
