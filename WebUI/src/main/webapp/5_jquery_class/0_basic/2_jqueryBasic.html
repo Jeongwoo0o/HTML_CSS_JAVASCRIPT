@@ -78,15 +78,108 @@
 			});
 		});
 		
+		
+		// 4
+		$(function() {
+			// '확인' 버튼 눌렸을 때
+			$("#check").click(function() {
+				// 사용자 입력값이나 선택값을 가져옴
+				let name 	= $("#tf")		.val();
+				let mesg	= $("#ta")		.val();
+				let addr1 	= $("#sel option:selected")		.text(); 
+				let addr2	= $("#sel_m option:selected")	.text();
+				alert(`이름    > ${name} \n메시지 > ${mesg} \n주소1  > ${addr1} \n주소2  > ${addr2}`);
+				
+				// 선택된 라디오버튼의 값을 아이디가 result인 태그 사이에 출력
+				let gender	= $("input[name='gender']:checked")	.val();
+				let lover	= $("input[name='lover']:checked")	.val();
+				let msg	= "성별 > " + gender + "<br/>" + " 애인 > " + lover + "<br/>";
+				$("#result").html(msg)
+			});
+			// '초기화' 버튼이 눌렸을 때
+			$("#init").click(function() {
+				$("#tf").val("내 이름은 홍길동입니다.");
+				
+				// 메세지 창에 '작성중...'이라고 지정
+				$("#ta").val("작성중...");
+				
+				// 주소 선택칸에 '마산'으로 지정
+				$("#sel").val("masan");
+				
+				// 두번째 주소 선택칸에는 '울릉도', '독도'가 선택될 수 있도록 지정
+				$("#sel_m").val(["seom2","seom3"]);
+				
+				// 성별 중에서 '여자' 체크
+				// $("input[name='gender']:eq(1)")	.attr("checked","true");
+				$("input[name='gender']:eq(1)")	.prop("checked","true");
+				// 애인 중에서 '없음' 체크
+				$("input[name='lover']:eq(1)")	.attr("checked","true");
+			});
+		});
+		
+		/*
+			[참고]
+		
+			- 태그와 태그사이의 값을 얻어올 때 : text() / html()
+			- value 값을 얻올 때 : val()
+		*/
+		
+		
+		// 5
+		$(function() {
+			let actor 	= $("#actor");
+			let tae		= $("#tae");
+			let	su		= $("#su");
+			let bin		= $("#bin");
+			
+			/*
+			[참고] 부모 / 자식 관계 맺기
+					
+				` 부모.append(자식)
+				` 자식.appendTo(부모)
+			*/
+			actor.append(tae);
+			actor.append(su);
+			actor.append(bin);
+			
+			/* *******************************************
+				var n = $("div");
+				var n = $("#div");
+				var n = $(".div");
+				
+				var n = $("div");		화면에 있는 div 요소를 찾아서 선택하여 변수 n 가리킴
+				var n = $("<div/>");	div 요소의 객체를 메모리 상에 생성하고 변수 n 가리킴
+				== var n = $("<div><div/>");
+			*/
+			
+			// 정석
+			var n = $("<div/>");
+			n.text("한배우");		// <div>한배우</div>
+			actor.append(n);
+			
+			// 정석 아님
+			var n2 = $("<div>두배우</div>");
+			actor.append(n2);
+		});
+			
+		
 		// 6
 		$(function() {
 			$(".data").each(function() {
 				$(this).click(function() {
-					// alert($(this).html());	// 제이쿼리
+					alert($(this).html());	// 제이쿼리
 					// alert(this.innerHTML);	// 자바스크립트
 				});
 			});
 		});
+		
+		/*
+		$(function() {
+			$(".data").click(function() {
+				alert($(this).html());
+			});
+		});
+		*/
 	</script>
 </head>
 <body>
@@ -128,6 +221,15 @@
 			<option value="seom3">독도</option>
 			<option value="seom4">거제도</option>
 		</select><br/>
+		성별 : 
+		<input type="radio" name="gender" value="남자"><span>남자</span>
+		<input type="radio" name="gender" value="여자"><span>여자</span>
+		<br/>
+		애인 : 
+		<input type="radio" name="lover" value="있음"><span>있음</span>
+		<input type="radio" name="lover" value="없음"><span>없음</span>
+		<br/>
+		
 		<input type='button' id='check' value='확인'/>
 		<input type='button' id='init' value='초기화'/> 
 		<div id='result'></div>
@@ -137,7 +239,7 @@
 		<div id="actor">배우</div>
 		<div id="tae">김태희</div>
 		<div id="su">김수현</div>
-		<div id="bin">현빈</div>
+		<div id="bin">현빈</div><br/>
 
 
 	<!-- 6 -->

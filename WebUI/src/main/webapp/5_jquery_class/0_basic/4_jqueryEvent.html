@@ -9,6 +9,49 @@
 	.border { border : 3px dotted red; }
 </style>
 
+<script type="text/javascript" src="../lib/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// 원래 이벤트 처리
+		/*
+		$("li").bind("click", function() {			// 매번 연결
+			// $("#result").html($(this).html());
+			$("#result").text($(this).text());
+		});
+		*/
+		/*
+		$("li").one("click", function() {			// 한번만 연결
+			$("#result").text($(this).text());
+		});
+		*/
+		// 축약
+		/*
+		$("li").click(function(evt) {
+			$("#result").text($(this).text());
+			for(var prop in evt) {
+				console.log(prop + "=" + evt[prop]);
+			}
+		});
+		*/
+		
+		$("li").css({"cursor":"pointer"});
+		$("h1").css({"cursor":"pointer"});
+		
+		$("h1").click(function() {
+			var li = $("<li/>");
+			li.text(new Date());
+			// var li = $("<li/>").text(new Date());
+			$("ul").append(li);
+			$("li").css({"cursor":"pointer"});
+		});
+		
+		// ***************************************
+		// 동적으로 생성된 요소의 이벤트 처리
+		$("ul").on("click","li",function() {
+			$("#result").text($(this).text());
+		});
+	});
+</script>
 </head>
 <body>
 	<h1>제이쿼리 이벤트</h1>
