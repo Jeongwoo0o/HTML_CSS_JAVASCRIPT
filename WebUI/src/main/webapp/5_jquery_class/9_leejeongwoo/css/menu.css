@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/* 테이블 */
+table 			{ filter		: hue-rotate(360deg);
+			      border		: 5px solid transparent;
+			      border-radius	: 20px;
+			      background-image	: linear-gradient(#fff, #fff), linear-gradient(to left,#37a9fa,#5951f3);
+			      background-clip	: content-box, border-box;
+			      background-origin	: border-box;
+			      animation		: huerotate 2s infinite linear; }
+
+td				{ border		:1px solid #AAB9FF;
+				  border-radius	:10px; }
+			  	  
+.menutable		{ width			:900px;
+				  height		:900px; }
+				  
+.pricetable 	{ width			:900px;
+				  height		:20px;
+				  text-align	:center;
+				  table-layout	:fixed; }
+
+#orderlist		{ width			:900px; 
+				  height		:20px; }
+
+#orderlist td	{ width 		:200px;
+			  	  height		:20px;
+			  	  text-align	:center; }
+			  	  
+
+/* 그 외 */		  	  
+.menuname		{ text-align	:center;
+			  	  background	:#C8C8FF; }
+
+.menuprice		{ text-align	:center;
+			  	  background	:#C8C8FF; }
+
+.btn			{ border-color	:#FF5A5A;
+				  background	:#F4B4B4;
+				  width			:100%;
+				  border-radius	:10px; }
+
+textarea		{ width			:900px;
+				  height		:200px; }
+
+img				{ width			:216.7px;
+				  height		:150px; }
+				  
+td.hover		{ border		:2px solid hotpink; }
+				  
+#title			{ width			:900px;
+				  border		:0px; }
+
+#titlee			{ text-align	:center;
+				  filter		: hue-rotate(360deg);
+			      border		: 5px solid transparent;
+			      border-radius	: 20px;
+			      background-image	: linear-gradient(#fff, #fff), linear-gradient(to left,#37a9fa,#5951f3);
+			      background-clip	: content-box, border-box;
+			      background-origin	: border-box;
+			      margin		: 50px 10px 10px;
+			      animation		: huerotate 2s infinite linear; }	
+				 
+#logo			{ height 		:70px;
+				  width			:300px; }
+				  
+@keyframes huerotate {
+  0% 	{ filter	:hue-rotate(0deg); }
+  100% 	{ filter	:hue-rotate(360deg); }
+}

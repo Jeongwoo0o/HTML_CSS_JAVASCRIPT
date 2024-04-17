@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>menu</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link href="./css/menu.css" rel="stylesheet">
+<script src="../lib/jquery-3.7.1.min.js"></script>
+<!-- bxslider -->
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="./js/menu.js"></script>
+</head>
+<body>
+<form name="orderform">
+	<table id="title">
+		<tr>
+			<th id="titlee"><img src="./images/logo.png" id="logo" alt="logo"></th>
+		</tr>
+	</table>
+	<ul class="bxslider">
+	  <li><img src="./images/1.png" alt="사진1" /></li>
+	  <li><img src="./images/2.png" alt="사진2" /></li>
+	  <li><img src="./images/3.png" alt="사진3" /></li>
+	  <li><img src="./images/4.png" alt="사진4" /></li>
+	  <li><img src="./images/5.png" alt="사진5" /></li>
+	  <li><img src="./images/6.png" alt="사진6" /></li>
+	  <li><img src="./images/7.png" alt="사진7" /></li>
+	  <li><img src="./images/8.png" alt="사진8" /></li>
+	  <li><img src="./images/9.png" alt="사진9" /></li>
+	  <li><img src="./images/10.png" alt="사진10" /></li>
+	  <li><img src="./images/11.png" alt="사진11" /></li>
+	  <li><img src="./images/12.png" alt="사진12" /></li>
+	</ul>
+	<table id="menutable">
+		<tr>
+			<td class="item menuimg" data-name="iPone 4S" data-price="700000"><img src="./images/1.png" alt="iPone 4S"></td>
+			<td class="item menuimg" data-name="iPone 5" data-price="800000"><img src="./images/2.png" alt="iPone 5"></td>
+			<td class="item menuimg" data-name="iPone 6" data-price="900000"><img src="./images/3.png" alt="iPone 6"></td>
+			<td class="item menuimg" data-name="iPone 7" data-price="1000000"><img src="./images/4.png" alt="iPone 7"></td>
+		</tr>
+		<tr>
+			<td class="menuname">iPone 4s</td>
+			<td class="menuname">iPone 5</td>
+			<td class="menuname">iPone 6</td>
+			<td class="menuname">iPone 7</td>
+		</tr>
+		<tr>
+			<td class="menuprice">700,000원</td>
+			<td class="menuprice">800,000원</td>
+			<td class="menuprice">900,000원</td>
+			<td class="menuprice">1,000,000원</td>
+		</tr>
+		
+		<tr>
+			<td class="item menuimg" data-name="iPone 8" data-price="1130000"><img src="./images/5.png" alt="iPone 8"></td>
+			<td class="item menuimg" data-name="iPone XS" data-price="1250000"><img src="./images/6.png" alt="iPone XS"></td>
+			<td class="item menuimg" data-name="iPone XR" data-price="1350000"><img src="./images/7.png" alt="iPone XR"></td>
+			<td class="item menuimg" data-name="iPone 11 Pro" data-price="1460000"><img src="./images/8.png" alt="iPone 11 Pro"></td>
+		</tr>
+		<tr>
+			<td class="menuname">iPone 8</td>
+			<td class="menuname">iPone XS</td>
+			<td class="menuname">iPone XR</td>
+			<td class="menuname">iPone 11 Pro</td>
+		</tr>
+		<tr>
+			<td class="menuprice">1,130,000원</td>
+			<td class="menuprice">1,250,000원</td>
+			<td class="menuprice">1,350,000원</td>
+			<td class="menuprice">1,460,000원</td>
+		</tr>
+		
+		<tr>
+			<td class="item menuimg" data-name="iPone 12 Pro" data-price="1560000"><img src="./images/9.png" alt="iPone 12 Pro"></td>
+			<td class="item menuimg" data-name="iPone 13 Pro" data-price="1570000"><img src="./images/10.png" alt="iPone 13 Pro"></td>
+			<td class="item menuimg" data-name="iPone 14 Pro" data-price="1610000"><img src="./images/11.png" alt="iPone 14 Pro"></td>
+			<td class="item menuimg" data-name="iPone 15 Pro" data-price="1650000"><img src="./images/12.png" alt="iPone 15 Pro"></td>
+		</tr>
+		<tr>
+			<td class="menuname">iPone 12 Pro</td>
+			<td class="menuname">iPone 13 Pro</td>
+			<td class="menuname">iPone 14 Pro</td>
+			<td class="menuname">iPone 15 Pro</td>
+		</tr>
+		<tr>
+			<td class="menuprice">1,560,000원</td>
+			<td class="menuprice">1,570,000원</td>
+			<td class="menuprice">1,610,000원</td>
+			<td class="menuprice">1,650,000원</td>
+		</tr>
+	</table>
+	
+	<br/>
+	<hr/>
+	<br/>
+	
+	<table class="pricetable">
+		<tr>
+			<th class="price">총 가격</th>
+			<th class="totalprice price">0</th>
+			<th><button type="submit" class="btn">주문하기</button></th>
+		</tr>
+	</table>
+	<table id="orderlist">
+		<tr class="ordertitle">
+			<th>제품</th>
+			<th>수량</th>
+			<th>가격</th>
+			<th>삭제</th>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
