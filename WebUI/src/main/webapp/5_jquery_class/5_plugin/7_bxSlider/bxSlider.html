@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <title> Plugin </title>
+
 <style type="text/css">
 *{margin:0;padding:0;}
 img{border:none 0;vertical-align:top;}
@@ -11,21 +12,38 @@ img{border:none 0;vertical-align:top;}
 #prevBtn{position:absolute;left:0;top:10px;} 
 #nextBtn{position:absolute;right:15px;top:10px;} 
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 
-
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- bxslider -->
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<!-- 우리꺼 -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#slide_banner").bxSlider({
+			minSlides : 4,
+			maxSlides : 4,
+			slideMargin : 10,
+			slideWidth : 80,
+			moveSlides : 1,
+			auto : true
+		});
+	});
+</script>
 </head>
 <body>
  <div id="banner_wrap">
      <!-- bxslider가 인식할 수 있도록 구조 변경 -->
       <div id="slide_banner">
-         <div><a href="#"><img src="images/pic_t1.jpg" alt="사진1" /></a></div>
-         <div><a href="#"><img src="images/pic_t2.jpg" alt="사진2" /></a></div>
-         <div><a href="#"><img src="images/pic_t3.jpg" alt="사진3" /></a></div>
-         <div><a href="#"><img src="images/pic_t4.jpg" alt="사진4" /></a></div>
-         <div><a href="#"><img src="images/pic_t5.jpg" alt="사진5" /></a></div>
-         <div><a href="#"><img src="images/pic_t6.jpg" alt="사진6" /></a></div>
-         <div><a href="#"><img src="images/pic_t7.jpg" alt="사진7" /></a></div>
-         <div><a href="#"><img src="images/pic_t8.jpg" alt="사진8" /></a></div>
+         <div><a href="#"><img class="banner" src="images/pic_t1.jpg" alt="사진1" /></a></div>
+         <div><a href="#"><img class="banner" src="images/pic_t2.jpg" alt="사진2" /></a></div>
+         <div><a href="#"><img class="banner" src="images/pic_t3.jpg" alt="사진3" /></a></div>
+         <div><a href="#"><img class="banner" src="images/pic_t4.jpg" alt="사진4" /></a></div>
+         <div><a href="#"><img class="banner" src="images/pic_t5.jpg" alt="사진5" /></a></div>
+         <div><a href="#"><img class="banner" src="images/pic_t6.jpg" alt="사진6" /></a></div>
+         <div><a href="#"><img class="banner" src="images/pic_t7.jpg" alt="사진7" /></a></div>
+         <div><a href="#"><img class="banner" src="images/pic_t8.jpg" alt="사진8" /></a></div>
       </div>    
 </div>
    

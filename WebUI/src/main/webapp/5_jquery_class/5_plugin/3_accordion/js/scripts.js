@@ -16,3 +16,9 @@
  			header : 헤더(일반)
  			activeHeader : 활성화 상태 헤더
  */
+
+ $(function() {
+	$(".accordion").accordion({
+		active : 2
+	});
+});
