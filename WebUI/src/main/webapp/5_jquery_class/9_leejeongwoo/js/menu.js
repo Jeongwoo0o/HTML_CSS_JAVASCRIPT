@@ -1,4 +1,6 @@
 $(function() {
+	$("#menutable img")	.css({ "cursor":"pointer" });
+	$(".btn")			.css({ "cursor":"pointer" });
     $("#menutable .item").on("click", function() {
         let name 	= $(this).attr("data-name");
         let price 	= $(this).attr("data-price");
@@ -52,5 +54,6 @@ function insertOrder(name, amount, price) {
     tr.append("<td>" + amount + "</td>");
     tr.append("<td>" + (price * amount) + "</td>");
     tr.append("<td><input type='button' class='btn' value='삭제'/></td>");
-    $("#orderlist").append(tr);
+    $("#orderlist")	.append(tr);
+    $(".btn")		.css({ "cursor":"pointer" });
 }

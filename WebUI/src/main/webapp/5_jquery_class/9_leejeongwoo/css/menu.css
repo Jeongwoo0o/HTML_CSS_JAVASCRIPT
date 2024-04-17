@@ -1,16 +1,17 @@
 @charset "UTF-8";
 
 /* 테이블 */
-table 			{ filter		: hue-rotate(360deg);
-			      border		: 5px solid transparent;
-			      border-radius	: 20px;
-			      background-image	: linear-gradient(#fff, #fff), linear-gradient(to left,#37a9fa,#5951f3);
-			      background-clip	: content-box, border-box;
-			      background-origin	: border-box;
-			      animation		: huerotate 2s infinite linear; }
+.tablecss, #titlee		{ filter		: hue-rotate(360deg);
+					      border		: 5px solid transparent;
+					      border-radius	: 20px;
+					      background-image	: linear-gradient(#fff, #fff), linear-gradient(to left,#37a9fa,#5951f3);
+					      background-clip	: content-box, border-box;
+					      background-origin	: border-box;
+					      animation		: huerotate 10s infinite linear;
+					      text-align	:center; }
 
 td				{ border		:1px solid #AAB9FF;
-				  border-radius	:10px; }
+				  border-radius	:20px; }
 			  	  
 .menutable		{ width			:900px;
 				  height		:900px; }
@@ -44,22 +45,13 @@ textarea		{ width			:900px;
 				  height		:200px; }
 
 img				{ width			:216.7px;
-				  height		:150px; }
+				  height		:150px;
+				  border-radius	:20px; }
 				  
 td.hover		{ border		:2px solid hotpink; }
 				  
 #title			{ width			:900px;
-				  border		:0px; }
-
-#titlee			{ text-align	:center;
-				  filter		: hue-rotate(360deg);
-			      border		: 5px solid transparent;
-			      border-radius	: 20px;
-			      background-image	: linear-gradient(#fff, #fff), linear-gradient(to left,#37a9fa,#5951f3);
-			      background-clip	: content-box, border-box;
-			      background-origin	: border-box;
-			      margin		: 50px 10px 10px;
-			      animation		: huerotate 2s infinite linear; }	
+				  border		:0px; }	
 				 
 #logo			{ height 		:70px;
 				  width			:300px; }
