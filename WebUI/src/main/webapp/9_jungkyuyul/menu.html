@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>한양화로</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ 
+<!-- 1)제이쿼리 라이브러리 -->
+<script type="text/javascript" src="../5_jquery_class/lib/jquery-3.7.1.js"></script>
+ 
+<script type="text/javascript" src="./js/hanyang.js"></script>
+ 
+</head>
+
+<body>
+
+
+<div id="leftdiv">
+<table class="menutbl">
+	<tr id="menutitle">
+		<th colspan=3 id="titleText">한양화로
+		<img src='./images/소.png' alt="소그림">
+		</th>
+	</tr>
+	<tr class="menus">
+		<td id='menu1' class='menu'>
+			<img src="./images/한양한판.png" /> <br/>
+			<span class="mname" id="label1" value = '한양한판'>한양한판</span>
+			<span class="mprice" id="price1" value='42500'>42500</span>원
+			<br/>
+			<select name="menu1Count" id="menu1Count" class='menuCount'>
+				<option value='0'>0</option>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select>
+		</td>
+		<td id='menu2' class='menu'>
+			<img src="./images/한양한판B.png" /> <br/>
+			<span class="mname" id="label2" value = '한양한판B'>한양한판B</span> 
+			<span class="mprice" id="price2" value = '42900'>42900</span>원<br/>
+			<select name="menu2Count" id="menu2Count" class='menuCount'>
+				<option value='0'>0</option>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select>
+		</td>
+		<td id='menu3' class='menu'>
+			<img src="./images/특토시살.png" /> <br/>
+			<span class="mname" id="label3" value = '특토시살'>특토시살</span>
+			<span class="mprice" id="price3" value = '8900'>8900</span>원<br/>
+			<select name="menu3Count" id="menu3Count" class='menuCount'>
+				<option value='0'>0</option>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select>
+		</td>
+		
+	</tr>
+	<tr class="menus">
+		<td id='menu4' class='menu'>
+			<img src="./images/눈꽃살치살.png" /> <br/>
+			<span class="mname" id="label4" value = '눈꽃살치살'>눈꽃살치살</span>
+			<span class="mprice" id="price4" value = '9900'>9900</span>원
+			<br/>
+			<select name="menu4Count" id="menu4Count" class='menuCount'>
+				<option value='0'>0</option>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select>
+		</td>
+		<td id='menu5' class='menu'>
+			<img src="./images/꽃등심.png" /> <br/>
+			<span class="mname" id="label5" value='꽃등심'>꽃등심</span>
+			<span class="mprice" id="price5" value='9900'>9900</span>원<br/>
+			<select name="menu5Count" id="menu5Count" class='menuCount'>
+				<option value='0'>0</option>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select>
+		</td>
+		<td id='menu6' class='menu'>
+			<img src="./images/꽃갈비살.png" /> <br/>
+			<span class="mname" id="label6" value='꽃갈비살'>꽃갈비살</span>
+			<span class="mprice" id="price6" value='7900'>7900</span>원 <br/>
+			<select name="menu6Count" id="menu6Count" class='menuCount'>
+				<option value='0'>0</option>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select>
+		</td>
+	</tr>
+	<tr class="menus">
+		<td id='menu7' class='menu'>
+			<img src="./images/부채살.png" /> <br/>
+			<span class="mname" id="label7" value='부채살'>부채살</span>
+			 <span class="mprice" id="price7" value='8900'>8900</span>원 <br/>
+			<select name="menu7Count" id="menu7Count" class='menuCount'>
+				<option value='0'>0</option>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select>
+		</td>
+		<td id='menu8' class='menu'>
+			<img src="./images/채끝살.png" /> <br/>
+			<span class="mname" id="label8" value='채끝살'>채끝살</span>
+			<span class="mprice" id="price8" value='8900'>8900</span>원 <br/>
+			<select name="menu8Count" id="menu8Count" class='menuCount'>
+				<option value='0'>0</option>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select>
+		</td>
+		<td id='menu9' class='menu'>
+			<img src="./images/치마살.png" /> <br/>
+			<span class="mname" id="label9" value='치마살'>치마살</span>
+			<span class="mprice" id="price9" value='8900'>8900</span>원 <br/>
+			<select name="menu9Count" id="menu9Count" class='menuCount'>
+				<option value='0'>0</option>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select>
+		</td>
+	</tr>
+</table>
+</div>
+
+<div id="rightdiv">
+<table id="listTable">
+	<tr id="listtitle">
+		<th colspan=3 id="titleText">주문내역</th>
+	</tr>
+	<tr id="totallist">
+		<td colspan='3'>
+			총합 : <input type='text'  id='total' value=""/> 원 
+			<input type='button'	value='주문하기'  id='btn'/>
+		</td>
+	</tr>
+	<tr id="listtr">
+		<td width="150">목록</td>
+		<td width="100">갯수</td>
+		<td width="100">가격</td>
+		<td width="50">삭제</td>
+	</tr>
+	
+</table>
+</div>
+
+</body>
+</html>
