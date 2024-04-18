@@ -3,6 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <title>광고페이지</title>
+<script type="text/javascript"   src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script type="text/javascript"   src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#closeWin").click(function() {
+			if($("input[type='checkbox']").is(":checked")) {
+				$.cookie("promotion", "no", { expires : 1 });
+			}
+			close();
+		});
+	});
+</script>
 </head>
 <body>
 <img alt="" src="./images/image.jpg"><br/>
