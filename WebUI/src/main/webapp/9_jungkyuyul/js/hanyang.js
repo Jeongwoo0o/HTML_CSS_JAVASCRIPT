@@ -8,8 +8,8 @@ $(function(){
     var count = parseInt($(this).val());
     var price = priceTd.find(".mprice").attr("value");
     createTable(menuId, count, price);
-    totalp += price * count;
-    $("#total").val(totalp);
+    totalPrice += count * price;
+    $('#total').val(totalPrice); // 텍스트로 설정
   });
 
   $('#btn').click(function() {
@@ -26,7 +26,7 @@ $(function(){
   });
 });
 
-function updateTotal() {
+function updateTotal(totalp) {
   totalPrice += totalp; // 총 가격에 새로운 메뉴의 총 가격을 추가
   $("#total").val(totalPrice);
 }

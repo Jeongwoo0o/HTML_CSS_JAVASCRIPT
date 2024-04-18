@@ -16,12 +16,12 @@ td				{ border		:1px solid #AAB9FF;
 .menutable		{ width			:900px;
 				  height		:900px; }
 				  
-.pricetable 	{ width			:900px;
+.pricetable 	{ width			:400px;
 				  height		:20px;
 				  text-align	:center;
 				  table-layout	:fixed; }
 
-#orderlist		{ width			:900px; 
+#orderlist		{ width			:400px; 
 				  height		:20px; }
 
 #orderlist td	{ width 		:200px;
@@ -55,6 +55,13 @@ td.hover		{ border		:2px solid hotpink; }
 				 
 #logo			{ height 		:70px;
 				  width			:300px; }
+				  
+#remote			{ position		:fixed; 
+				  right			:50%; 
+				  top			:180px; 
+				  margin-right	:-320px;
+				  text-align	:center;
+				  width			:120px; }
 				  
 @keyframes huerotate {
   0% 	{ filter	:hue-rotate(0deg); }
