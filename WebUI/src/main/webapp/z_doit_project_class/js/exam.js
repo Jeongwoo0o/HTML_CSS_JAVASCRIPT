@@ -23,13 +23,13 @@ $(function() {
     $("#tabmenu dd:first-child").show();
     
     // 탭 버튼 클릭 시 이벤트
-    let alldd = $("#tabmenu dd");
+    let tabAlldd = $("#tabmenu dd");
     $("#tabmenu img").click(function(){
 		let src = $("#tabmenu img").filter("[src*='over']");
 		src.attr("src", src.attr("src").replace("over", "out"));
 		$(this).attr("src", $(this).attr("src").replace("out", "over"));
 		
-        alldd.hide();
+        tabAlldd.hide();
         $(this).parents("dt").next().show();
     });
 	
@@ -118,7 +118,15 @@ $(function() {
 	}
 	
 	// 알림판
-	
-	
+	let bannerAlldd = $("#roll_banner_wrap dd");
+	let banner = $("#roll_banner_wrap > dl > dt > a > img");
+	banner.click(function() {
+		let src = banner.filter("[src*='over']");
+		src.attr("src", src.attr("src").replace("over", "out"));
+		$(this).attr("src", $(this).attr("src").replace("out", "over"));
+		
+		bannerAlldd.hide();
+		$(this).parents("dt").next().show();
+	});
 });
 
